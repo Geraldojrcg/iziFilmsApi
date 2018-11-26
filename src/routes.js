@@ -12,10 +12,10 @@ routes.post('/films', upload, FilmController.store);
 routes.put('/films/:id', upload, FilmController.update);
 routes.delete('/films/:id', FilmController.delete);
 
-routes.get('/user', UserController.index);
-routes.get('/user/:id', UserController.show);
-routes.post('/user', UserController.store);
-routes.put('/user/:id', UserController.update);
-routes.delete('/user/:id', UserController.delete);
+routes.get('/users', UserController.index);
+routes.get('/users/:id', UserController.show);
+routes.post('/users', UserController.store);
+routes.put('/users/:id', UserController.update);
+routes.delete('/users/:id', UserController.delete);
 
 module.exports = routes;

@@ -5,7 +5,7 @@ const Film = mongoose.model('Film');
 module.exports = {
     async index(req, res){
         const { page = 1 } = req.query;
-        const films = await Film.paginate({}, {page, limit: 10});
+        const films = await Film.paginate({}, {page, limit: 5});
         return res.json(films); 
     },
     async store(req, res){
