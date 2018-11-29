@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 //iniciando o db
-mongoose.connect('mongodb://localhost:27017/apinode', { useNewUrlParser: true });
+//mongoose.connect('mongodb://localhost:27017/apinode', { useNewUrlParser: true });
 requireDir('./src/models/');
 
 //usando as rotas
