@@ -6,6 +6,8 @@ This project aims to develop an api using node/express.js that manages movies an
 
 ## To run the project for once, use the command:
   - npm install
+### After, use the command to run the server:
+  - npm start
   
 ## Routes of API Films
   - GET /api/films
