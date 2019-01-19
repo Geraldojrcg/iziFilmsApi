@@ -4,7 +4,7 @@ This project aims to develop an api using node/express.js that manages movies an
 ## Depencies
   - Node and npm
 
-## To run the project for once, use the command:
+## To run the project for the first time, use the command:
   - npm install
 ### After, use the command to run the server:
   - npm start
