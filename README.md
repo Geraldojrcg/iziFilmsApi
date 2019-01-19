@@ -9,18 +9,18 @@ This project aims to develop an api using node/express.js that manages movies an
 ### After, use the command to run the server:
   - npm start
   
-## Routes of API Films
+## Routes of Films endpoint
   - GET /api/films
   - POST /api/films
   - PUT /api/films/id
   - DELETE /api/films/id
 
-## Routes of API Users
+## Routes of Users endpoint
   - GET /api/users
   - POST /api/users
   - PUT /api/users/id
   - DELETE /api/users/id
   
-## Routes for API authentication
+## Routes for authentication endpoint
   - GET /api/logout
   - POST /api/login
