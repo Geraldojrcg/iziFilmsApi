@@ -1,23 +1,45 @@
+const db = require('../../models');
 
 module.exports = {
     async index(req, res){
-        const users = await User.find();
-        return res.json(users); 
+        try {
+            const users = await db.User.findAll({limit: 10, order: [['id', 'DESC']]});
+            return res.json(users); 
+        } catch (error) {
+            return res.json({error: error});
+        }
     },
     async store(req, res){
-        const user = await User.create(req.body);
-        return res.json(user);
+        try {
+            const user = await db.User.create(req.body);
+            return res.json(user);
+        } catch (error) {
+            return res.json({error: error});
+        }
     },
     async show(req, res){
-        const user = await User.findById(req.params.id);
-        return res.json(user);
+        try {
+            const user = await db.User.findAll({where: {id: req.params.id}});
+            return res.json(user);
+        } catch (error) {
+            return res.json({error: error});
+        }
     },
     async update(req, res){
-        const user = await User.findByIdAndUpdate(req.params.id, req.body, {new: true});
-        return res.json(user);
+        try{
+            const user = await db.User.update(req.body, { where: {id: req.params.id}});
+            return res.json({user: user, status: "Updated"});
+        }catch(err){
+            return res.json({error: error});
+        }
+    
     },
     async delete(req, res){
-        await User.findByIdAndRemove(req.params.id);
-        return res.send("Deleted");
+        try {
+            const user = await db.User.destroy({where:{id: req.params.id}});
+            return res.json({user: user, status: "Deleted"});   
+        } catch (error) {
+            return res.json({error: error});
+        }
     }
 };
